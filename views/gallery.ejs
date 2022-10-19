@@ -1,0 +1,16 @@
+<h1>Gallery</h1>
+
+<div class="gallery" id="gallery">
+    <% if(food != '') { %>
+        <% food.latest.forEach(function(recipe, index){ %>
+        <div class="gallery-item">
+            <div class="content"><img src="/uploads/<%= recipe.image %>" alt="<%= recipe.name %>" loading="lazy"></div>
+        </div>
+        <% }) %>
+    <% } else { %>
+        <p>NO PHOTOS</p>
+    <% } %>
+</div>
+
+
+
